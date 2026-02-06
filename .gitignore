@@ -1,0 +1,13 @@
+# MPLAB X
+nbproject/private/
+build/
+dist/
+*.o
+*.hex
+*.elf
+*.lst
+*.map
+
+# OS
+.DS_Store
+Thumbs.db
