@@ -57,7 +57,7 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=blink_assembler.asm
+SOURCEFILES_QUOTED_IF_SPACED=blink_assembler.s
 
 # Object Files Quoted if spaced
 OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/blink_assembler.o
@@ -67,7 +67,7 @@ POSSIBLE_DEPFILES=${OBJECTDIR}/blink_assembler.o.d
 OBJECTFILES=${OBJECTDIR}/blink_assembler.o
 
 # Source Files
-SOURCEFILES=blink_assembler.asm
+SOURCEFILES=blink_assembler.s
 
 
 
@@ -94,21 +94,21 @@ MP_PROCESSOR_OPTION=PIC16F877A
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: pic-as-assembler
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/blink_assembler.o: blink_assembler.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/blink_assembler.o: blink_assembler.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/blink_assembler.o 
 	${MP_AS} -mcpu=PIC16F877A -c \
 	-o ${OBJECTDIR}/blink_assembler.o \
-	blink_assembler.asm \
+	blink_assembler.s \
 	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
 else
-${OBJECTDIR}/blink_assembler.o: blink_assembler.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/blink_assembler.o: blink_assembler.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/blink_assembler.o 
 	${MP_AS} -mcpu=PIC16F877A -c \
 	-o ${OBJECTDIR}/blink_assembler.o \
-	blink_assembler.asm \
+	blink_assembler.s \
 	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
 endif
